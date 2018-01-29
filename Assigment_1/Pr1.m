@@ -10,4 +10,7 @@ N=100;
 
 x=linspace(0,2,100);
 Eurz=Euler(f,a,b,alpha,N);
-plot(x,Eurz);
+[t,y]=ode45(f,[0,2],2);
+
+plot(x,Eurz,t,y);
+legend('euler','ode45')
