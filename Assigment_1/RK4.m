@@ -1,5 +1,5 @@
-function [ w ] = RK4(f,a,b,alpha,N)
-h = (b-a)/N;
+function [ E ] = RK4(f,a,b,alpha,N,h)
+%h = (b-a)/N;
 t=a;
 w=alpha;
 for i=(1:N);
@@ -9,6 +9,7 @@ for i=(1:N);
     k4=h*f(t+h,w+k3);
     
     w= w+1/6*(k1+2*k2+2*k3+k4);
+    E(i)=w;
     t=a+i*h;
     
 end
