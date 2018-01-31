@@ -1,16 +1,11 @@
 function [E] = Euler( f,a,b,alpha,N,h )
-%f= function
-%a=initial x
-%b= final x
-%alpha= given value
-%=N= number of iteration
-%h = (b-a)/N;
-t=a;
-w=alpha;
+
+t=a; % start point labeled as t
+w=alpha; % initial value is now w
 for i=(1:N)
-    w=w+h*f(t,w);
-    E(i)=w;
-    t=a+i*h;
+    w=w+h*f(t,w); %eulers method formula
+    E(i)=w; %records values to return 
+    t=a+i*h; % next step
     
 end
 
