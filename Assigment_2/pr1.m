@@ -56,8 +56,7 @@ ylabel('temp. [Celcius]')
 title('FDM')
 subplot(2,1,2)
 plot(x,73.4523*exp(0.1*x)-53.4523*exp(-0.1*x)+20);
-legend('FDM','solution')
+legend('Sol','solution')
 xlabel('length [m]')
 ylabel('temp. [Celcius]')
 title('Solution')
-% or u =inv(A)*c

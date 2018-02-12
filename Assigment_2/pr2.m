@@ -59,7 +59,7 @@ ylabel('length [ft]')
 title('FDM')
 subplot(2,1,2)
 plot(x,(w*l*x.^3./(12*E*I))-(w*x.^4./(24*E*I))-(w*l^3*x./(24*E*I)));
-legend('FDM','solution')
+legend('Sol','solution')
 xlabel('length [ft]')
 ylabel('length [ft]')
 title('Solution')
